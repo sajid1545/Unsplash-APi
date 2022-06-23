@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap);
+
+body {
+  font-family: 'Caesar Dressing', display;
+  background-color: #c3cfe2 ;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    margin:  auto;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+nav{
+    border-bottom: 4px solid orangered;
+}
+.navbar h2{
+    font-size: 2rem;
+}
+.user-input{
+    position: relative;
+    width: 550px;
+}
+.user-input input{
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+.user-input input:focus{
+    box-shadow: 0 0 15px orangered;
+}
+.user-input i{
+    position: absolute;
+    right: -3%;
+    top: 12px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.user-input i:hover{
+    color: orangered;
+}
+.pic-box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.img{
+    width: 400px;
+    height: 200px;
+    margin-top: 10px;
+    background-size: cover;
+    background-position: center;
+}
+.container-2{
+    width: 90%;
+    margin: auto;
+}
+.darkLight{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.darkLight i{
+    position: absolute;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.darkLight i:hover{
+    color: orangered;
+}
+
+.darkLight i.sun{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.darkLight.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.darkLight.active i.moon{
+    opacity: 0;
+    pointer-events: none;
+}
+
+body.dark {
+    background-color: #18191A;
+}
+
+body.dark .navbar h2{
+    color: white;
+}
+body.dark .darkLight i{
+    color: orangered;
+}
+body.dark .darkLight i:hover{
+    color: orangered;
+}
+body.dark .user-input input{
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%);
+    color: white;
+    border: 1px solid white;
+}
+body.dark .user-input input::placeholder{
+    color: white;
+}
+body.dark .user-input i{
+    color: white;
+}
+
+
+@media (max-width:1024px) {
+    .user-input {
+        width: 70%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width:768px) {
+
+    .navbar{
+        justify-content: center;
+    }
+    .user-input {
+        width: 80%;
+        margin:10px auto;
+    }
+
+}
+
+@media (max-width:480px) {
+
+    .navbar{
+        justify-content: center;
+    }
+    .user-input  {
+        width: 70%;
+        margin:  10px auto;
+    }
+    .user-input input{
+        font-size: 1rem;
+    }
+    .darkLight i{
+        font-size: 25px;
+    }
+
+}
+@media (max-width:320px) {
+    .user-input input{
+        font-size: .7rem;
+    }
+    .user-input  {
+        width: 60%;
+        margin: 10px auto;
+
+    }
+  
+
+}
